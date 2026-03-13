@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Access Page</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#1e1e2f;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+.box{
+    background:#2c2c3e;
+    padding:40px;
+    border-radius:10px;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    background:#ff4d4d;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h1>Access Granted</h1>
+<p>You successfully logged in.</p>
+
+<button onclick="logout()">Logout</button>
+</div>
+
+<script>
+if(localStorage.getItem("loggedIn") !== "true"){
+    window.location.href = "index.html";
+}
+
+function logout(){
+    localStorage.removeItem("loggedIn");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
