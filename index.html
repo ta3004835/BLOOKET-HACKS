@@ -70,6 +70,7 @@ function login() {
     const password = document.getElementById("password").value;
 
     if (username === "Blooket" && password === "Cheats") {
+        localStorage.setItem("loggedIn", "true");
         window.location.href = "access-link.html";
     } else {
         document.getElementById("error").textContent = "Invalid username or password";
